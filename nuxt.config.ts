@@ -71,7 +71,9 @@ export default defineNuxtConfig({
   },
   compatibilityDate: 'latest',
   nitro: {
-     preset: 'cloudflare-module',
+    // Pages builds set CF_PAGES=1 and expect output in dist/ (cloudflare_pages preset).
+    // Workers Builds use cloudflare-module and deploy via wrangler deploy (.output/).
+    preset: process.env.CF_PAGES ? 'cloudflare_pages' : 'cloudflare-module',
     experimental: {
       openAPI: true,
     },
