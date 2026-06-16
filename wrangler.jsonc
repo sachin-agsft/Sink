@@ -7,7 +7,7 @@
     "directory": ".output/public",
     "html_handling": "drop-trailing-slash"
   },
-  "compatibility_date": "2025-05-08",
+  "compatibility_date": "2026-06-16",
   "compatibility_flags": [
     "nodejs_compat"
   ],
