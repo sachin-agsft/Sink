@@ -2,7 +2,7 @@
 
 1. [Fork](https://github.com/miantiao-me/Sink/fork) the repository to your GitHub account.
 2. Create a project in [Cloudflare Pages](https://developers.cloudflare.com/pages/).
-3. Select the `Sink` repository and choose the `Nuxt.js` preset. The build output directory is configured in `wrangler.jsonc` (`pages_build_output_dir: "./dist"`), so you do not need to change it in the dashboard.
+3. Select the `Sink` repository and choose the `Nuxt.js` preset. On Cloudflare Pages builds, `CF_PAGES=1` swaps in `wrangler.pages.jsonc` automatically and outputs to `dist/`.
 4. Configure the following environment variables:
    - `NUXT_SITE_TOKEN`: Must be at least **8** characters long. This token grants access to your dashboard.
    - `NUXT_CF_ACCOUNT_ID`: Find your [account ID](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/).
